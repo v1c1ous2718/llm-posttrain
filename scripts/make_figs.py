@@ -131,5 +131,29 @@ def fig_sft_loss():
     save(fig, "sft_loss.png")
 
 
+def fig_selftrain():
+    rs = [("SFT 438", j("eval_sft_0438.json"))] + [(f"self-train r{r}", j(f"eval_selftrain_r{r}.json")) for r in (1, 2, 3)]
+    if any(e is None for _, e in rs): return
+    g = j("eval_grpo_from_sft0438_lr5e-6.json")["test"]
+    gens = [json.loads((R / "selftrain" / f"round{r}_gen.json").read_text()) for r in (1, 2, 3)]
+    x = np.arange(len(rs))
+    fig, (a, b) = plt.subplots(1, 2, figsize=(9.6, 3.6))
+    for k, lab, c in [("greedy_acc", "greedy accuracy", C[0]), ("sample_acc", "T=1 pass@1", C[1]), ("pass@8", "pass@8", C[2])]:
+        y = [e["test"][k] * 100 for _, e in rs]
+        a.plot(x, y, "o-", color=c, label=lab)
+        a.axhline(g[k] * 100, color=c, ls=":", lw=1.3)
+    a.set_xticks(x, [n for n, _ in rs], fontsize=8.5); a.set_ylabel("GSM8K test (%)")
+    a.set_title("self-training vs GRPO (dotted: GRPO lr 5e-6, 100 steps)", fontsize=9.5)
+    a.legend(fontsize=8, frameon=False, loc="center", bbox_to_anchor=(0.5, 0.6), ncol=3)
+    r = [1, 2, 3]
+    b.plot(r, [s["mean_distinct_answers"] for s in gens], "o-", color=C[4], label="distinct answers / 8 samples")
+    b.set_ylabel("distinct answers per prompt", color=C[4]); b.set_xticks(r, [f"round {i}" for i in r])
+    b2 = b.twinx(); b2.grid(False)
+    b2.plot(r, [s["prompts_solved"] * 100 for s in gens], "s--", color=C[3], label="prompts solved (%)")
+    b2.set_ylabel("train prompts with >= 1 correct (%)", color=C[3])
+    b.set_title("generation side (train prompts, 8 samples each)", fontsize=9.5)
+    fig.tight_layout(); save(fig, "selftrain.png")
+
+
 if __name__ == "__main__":
-    fig_sft_diagnostics(); fig_sft_loss(); fig_grpo_curves(); fig_gain(); fig_ppo_vs_grpo()
+    fig_sft_diagnostics(); fig_sft_loss(); fig_grpo_curves(); fig_gain(); fig_ppo_vs_grpo(); fig_selftrain()

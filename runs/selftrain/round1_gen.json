@@ -1,0 +1,13 @@
+{
+ "round": 1,
+ "generator": "sft_0438",
+ "prompts": 1600,
+ "samples": 12800,
+ "sample_acc": 0.261640625,
+ "prompts_solved": 0.68,
+ "kept": 2856,
+ "mean_distinct_answers": 6.0975,
+ "mean_distinct_texts": 7.99875,
+ "mean_len_tokens": 100.851328125,
+ "gen_time_s": 279.14360308647156
+}

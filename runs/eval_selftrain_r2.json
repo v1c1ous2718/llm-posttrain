@@ -1,0 +1,61 @@
+{
+ "model": "ckpt/selftrain_r2",
+ "val": {
+  "n": 473,
+  "greedy_acc": 0.5391120507399577,
+  "greedy_format": 0.9936575052854123,
+  "sample_acc": 0.31606765327695563,
+  "sample_format": 0.9915433403805497,
+  "pass@8": 0.7378435517970402,
+  "frac_all_wrong": 0.26215644820295986,
+  "frac_all_right": 0.03805496828752643,
+  "frac_mixed": 0.6997885835095138,
+  "mean_len_tokens": 95.95322410147992,
+  "examples": [
+   {
+    "q": "Joy can read 8 pages of a book in 20 minutes. How many hours will it take her to read 120 pages?",
+    "gold": "5",
+    "out": "First, find the number of pages Joy reads per minute: 8 pages / 20 minutes = 0.4 pages per minute\nThen find the number of minutes it takes her to read 120 pages: 120 pages / 0.4 pages per minute = 300 minutes\nThen convert the minutes to hours: 300 minutes / 60 minutes per hour = 5 hours\n#### 5"
+   },
+   {
+    "q": "Mary does her grocery shopping on Saturday. She does her shopping only at a specific store where she is allowed a credit of $100, which must be paid in full before her next shopping trip. That week she spent the full credit limit and paid $15 of it on Tuesday and $23 of it on Thursday. How much credit will Mary need to pay before her next shopping trip?",
+    "gold": "62",
+    "out": "Mary paid a total of $15 + $23 = $38 of the credit.\nSince the store has a credit limit of $100, Mary will need to pay $100 - $38 = $62 of her credit before her next shopping trip.\n#### 62"
+   },
+   {
+    "q": "Mr. Sanchez found out that 40% of his Grade 5  students got a final grade below B. How many of his students got a final grade of B and above if he has 60 students in Grade 5?",
+    "gold": "36",
+    "out": "Since 40% of his students got a final grade below B, then 100% - 40% = 60% of his students got a final grade of B and above.\nSince 60% of his students got a final grade of B and above, then 60/100 * 60 students = 36 students got a final grade of B and above.\n#### 36"
+   }
+  ]
+ },
+ "test": {
+  "n": 1319,
+  "greedy_acc": 0.38968915845337376,
+  "greedy_format": 0.9893858984078847,
+  "sample_acc": 0.24128127369219105,
+  "sample_format": 0.9858794541319181,
+  "pass@8": 0.604245640636846,
+  "frac_all_wrong": 0.3957543593631539,
+  "frac_all_right": 0.019711902956785442,
+  "frac_mixed": 0.5845337376800607,
+  "mean_len_tokens": 102.43195602729341,
+  "examples": [
+   {
+    "q": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+    "gold": "18",
+    "out": "She eats 3 eggs + 4 muffins = 7 eggs every day.\nShe makes 16 eggs - 7 eggs = 9 eggs every day.\nShe makes 9 eggs * $2 = $18 every day.\n#### 18"
+   },
+   {
+    "q": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+    "gold": "3",
+    "out": "It takes 2*2=4 bolts of blue fiber\nIt takes 4/2=2 bolts of white fiber\nIt takes 4+2=6 bolts in total\n#### 6"
+   },
+   {
+    "q": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+    "gold": "70000",
+    "out": "The house increased in value by 150/100*80,000=$120,000\nSo the house is now worth 80,000+120,000=$200,000\nSo his profit is 200,000-80,000=$120,000\n#### 120,000"
+   }
+  ]
+ }
+}

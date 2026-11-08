@@ -1,0 +1,13 @@
+{
+ "round": 2,
+ "generator": "selftrain_r1",
+ "prompts": 1600,
+ "samples": 12800,
+ "sample_acc": 0.31234375,
+ "prompts_solved": 0.7175,
+ "kept": 3209,
+ "mean_distinct_answers": 5.6275,
+ "mean_distinct_texts": 7.9975,
+ "mean_len_tokens": 99.4028125,
+ "gen_time_s": 296.26593494415283
+}
