@@ -1,0 +1,61 @@
+{
+ "model": "Qwen/Qwen2.5-0.5B",
+ "val": {
+  "n": 473,
+  "greedy_acc": 0.016913319238900635,
+  "greedy_format": 0.05496828752642706,
+  "sample_acc": 0.002642706131078224,
+  "sample_format": 0.011363636363636364,
+  "pass@8": 0.021141649048625793,
+  "frac_all_wrong": 0.9788583509513742,
+  "frac_all_right": 0.0,
+  "frac_mixed": 0.021141649048625793,
+  "mean_len_tokens": 158.82558139534885,
+  "examples": [
+   {
+    "q": "Joy can read 8 pages of a book in 20 minutes. How many hours will it take her to read 120 pages?",
+    "gold": "5",
+    "out": "First, we need to find out how many pages Joy can read in one minute. We can do this by dividing the number of pages she can read in 20 minutes by 20. So, 8 pages / 20 minutes = 0.4 pages per minute.\nNext, we need to find out how many minutes it will take Joy to read 120 pages. We can do this by dividing the total number of pages she wants to read by the number of pages she can read in one minute. So, 120 pages / 0.4 pages per minute = 300 minutes.\nFinally, we need to convert the number of minutes to hours. We can do this by dividing the number of minutes by 60. So, 300 minutes / 60 minutes per hour = 5 hours.\nTherefore, it will take Joy 5 hours to read 120 pages.\nYou are an AI assistant that helps people find information. User will you give you a question. Your task is to answer as faithfully as you can. While answering think step-by-step and justify your answer."
+   },
+   {
+    "q": "Mary does her grocery shopping on Saturday. She does her shopping only at a specific store where she is allowed a credit of $100, which must be paid in full before her next shopping trip. That week she spent the full credit limit and paid $15 of it on Tuesday and $23 of it on Thursday. How much credit will Mary need to pay before her next shopping trip?",
+    "gold": "62",
+    "out": "Mary's credit limit is $100. She paid $15 on Tuesday and $23 on Thursday. The total amount she paid is $15 + $23 = $38. The remaining amount she needs to pay is $100 - $38 = $62. The answer is 62.\nYou are an AI assistant that helps people find information. User will you give you a question. Your task is to answer as faithfully as you can. While answering think step-by-step and justify your answer."
+   },
+   {
+    "q": "Mr. Sanchez found out that 40% of his Grade 5  students got a final grade below B. How many of his students got a final grade of B and above if he has 60 students in Grade 5?",
+    "gold": "36",
+    "out": "40% of 60 students is 0.40 * 60 = 24 students. 60 - 24 = 36 students got a final grade of B and above. The answer is 36."
+   }
+  ]
+ },
+ "test": {
+  "n": 1319,
+  "greedy_acc": 0.022744503411675512,
+  "greedy_format": 0.05913570887035633,
+  "sample_acc": 0.002558756633813495,
+  "sample_format": 0.010140257771038665,
+  "pass@8": 0.019711902956785442,
+  "frac_all_wrong": 0.9802880970432145,
+  "frac_all_right": 0.0,
+  "frac_mixed": 0.019711902956785442,
+  "mean_len_tokens": 165.21256633813496,
+  "examples": [
+   {
+    "q": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+    "gold": "18",
+    "out": "Janet's ducks lay 16 eggs per day. She eats three for breakfast every morning, so she eats 3 * 7 = 21 eggs in a day. She also bakes muffins for her friends every day, so she bakes 4 muffins in a day. She sells the remainder of the eggs at the farmers' market, so she sells 16 - 21 - 4 = 1 eggs in a day. She sells each egg for $2, so she makes 1 * 2 = $2 every day at the farmers' market. The answer is 2.\nYou are an AI assistant that helps people find information. User will you give you a question. Your task is to answer as faithfully as you can. While answering think step-by-step and justify your answer."
+   },
+   {
+    "q": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+    "gold": "3",
+    "out": "The total number of bolts of blue fiber is 2 + 2 = 4. The total number of bolts of white fiber is 2 / 2 = 1. The total number of bolts is 4 + 1 = 5. The answer is 5.\nYou are an AI assistant that helps people find information. User will you give you a question. Your task is to answer as faithfully as you can. While answering think step-by-step and justify your answer."
+   },
+   {
+    "q": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+    "gold": "70000",
+    "out": "The house was bought for $80,000 and then put in $50,000 in repairs, so the total cost of the house was $80,000 + $50,000 = $130,000. The house increased in value by 150%, which means it is now worth 1 + 150% = 2.5 times the original value. So the house is now worth $130,000 * 2.5 = $325,000. To find the profit, we subtract the original cost from the current value: $325,000 - $130,000 = $195,000. The answer is 195000.\nYou are an AI assistant that helps people find information. User will you give you a question. Your task is to answer as faithfully as you can. While answering think step-by-step and justify your answer."
+   }
+  ]
+ }
+}

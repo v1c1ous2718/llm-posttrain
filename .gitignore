@@ -1,0 +1,6 @@
+data/
+ckpt/
+.venv/
+__pycache__/
+*.log
+*.out

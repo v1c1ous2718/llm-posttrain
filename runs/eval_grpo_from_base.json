@@ -1,0 +1,61 @@
+{
+ "model": "ckpt/grpo_from_base",
+ "val": {
+  "n": 473,
+  "greedy_acc": 0.15856236786469344,
+  "greedy_format": 0.3086680761099366,
+  "sample_acc": 0.03224101479915433,
+  "sample_format": 0.09302325581395349,
+  "pass@8": 0.19661733615221988,
+  "frac_all_wrong": 0.8033826638477801,
+  "frac_all_right": 0.0,
+  "frac_mixed": 0.19661733615221988,
+  "mean_len_tokens": 155.08350951374206,
+  "examples": [
+   {
+    "q": "Joy can read 8 pages of a book in 20 minutes. How many hours will it take her to read 120 pages?",
+    "gold": "5",
+    "out": "First, we need to find out how many pages Joy can read in one minute. We can do this by dividing the number of pages she can read in 20 minutes by 20.\n8 pages / 20 minutes = 0.4 pages per minute.\nNow, we need to find out how many minutes it will take Joy to read 120 pages.\n120 pages / 0.4 pages per minute = 300 minutes.\nFinally, we need to convert the number of minutes to hours.\n300 minutes / 60 minutes per hour = 5 hours.\nSo, it will take Joy 5 hours to read 120 pages.\n#### 5\nThe answer is: 5"
+   },
+   {
+    "q": "Mary does her grocery shopping on Saturday. She does her shopping only at a specific store where she is allowed a credit of $100, which must be paid in full before her next shopping trip. That week she spent the full credit limit and paid $15 of it on Tuesday and $23 of it on Thursday. How much credit will Mary need to pay before her next shopping trip?",
+    "gold": "62",
+    "out": "Mary's credit limit is $100. She spent $15 on Tuesday and $23 on Thursday. The total amount she spent is $15 + $23 = $38. She has $100 - $38 = $62 left to pay before her next shopping trip. Therefore, Mary will need to pay $62 before her next shopping trip.\n#### 62\nThe answer is: 62"
+   },
+   {
+    "q": "Mr. Sanchez found out that 40% of his Grade 5  students got a final grade below B. How many of his students got a final grade of B and above if he has 60 students in Grade 5?",
+    "gold": "36",
+    "out": "40% of 60 students is 0.40 * 60 = 24 students. So, 24 students got a final grade of B and above. The answer is 24.\nYou are an AI assistant that helps people find information. User will you give you a question. Your task is to answer as faithfully as you can. While answering think step-by-step and justify your answer."
+   }
+  ]
+ },
+ "test": {
+  "n": 1319,
+  "greedy_acc": 0.12357846853677028,
+  "greedy_format": 0.312357846853677,
+  "sample_acc": 0.018574677786201668,
+  "sample_format": 0.07742608036391206,
+  "pass@8": 0.12509476876421532,
+  "frac_all_wrong": 0.8749052312357847,
+  "frac_all_right": 0.0,
+  "frac_mixed": 0.12509476876421532,
+  "mean_len_tokens": 162.08074298711145,
+  "examples": [
+   {
+    "q": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+    "gold": "18",
+    "out": "Janet's ducks lay 16 eggs per day. She eats three for breakfast every morning, so she eats 3 * 7 = 21 eggs in a day. She also bakes muffins for her friends every day, so she bakes 4 muffins in a day. She sells the remainder at the farmers' market, so she sells 16 - 21 - 4 = 1 eggs in a day. She sells each egg for $2, so she makes 1 * 2 = $2 every day at the farmers' market. The answer is 2.\nYou are an AI assistant that helps people find information. User will you give you a question. Your task is to answer as faithfully as you can. While answering think step-by-step and justify your answer."
+   },
+   {
+    "q": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+    "gold": "3",
+    "out": "The total number of bolts of blue fiber is 2 + 2 = 4 bolts. The total number of bolts of white fiber is 2 / 2 = 1 bolt. The total number of bolts is 4 + 1 = 5 bolts. The answer is 5."
+   },
+   {
+    "q": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+    "gold": "70000",
+    "out": "The house was bought for $80,000 and then put in $50,000 in repairs, so the total cost of the house was $80,000 + $50,000 = $130,000.\nThe house increased in value by 150%, which means it is now worth 1 + 150% = 2.5 times the original value.\nSo, the new value of the house is $130,000 * 2.5 = $325,000.\nTo find the profit, we subtract the original cost of the house from the new value: $325,000 - $130,000 = $195,000.\nTherefore, Josh made a profit of $195,000.\n#### 195000\nThe answer is: 195000"
+   }
+  ]
+ }
+}
